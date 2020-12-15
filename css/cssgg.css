@@ -1,3 +1,9 @@
+#tabla {
+    border: 2px solid black;
+    width: 80%;
+    background: rgb(200, 200, 200)
+}
+
 .bgwebprotec {
     background-color: rgb(200, 200, 200);
 }

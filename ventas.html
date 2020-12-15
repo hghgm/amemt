@@ -6,7 +6,8 @@
     <title>ProTec Tandil</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/cssgg.css">  
-    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
@@ -63,33 +64,37 @@
     </div>
     <div>
     <table id="tabla" class="mx-auto text-center">
-    <tbody id="tablabody">
-      <tr>
-        <th>Hola</th>
-        <th>Segunda col</th>
-        <th>3er columna</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-      </tr>
-      <tr>
-        <td>A</td>
-        <td>B</td>
-        <td>C</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-      </tr>
-    </tbody>
     </table>
+    </div>
+    <div class="mx-auto text-center align-items-center">
+      <button data-toggle="modal" data-target="#AgregarModal">Agregar</button>
+      </div>
+      <!-- Modal -->
+<div class="modal fade" id="AgregarModal" tabindex="-1" role="dialog" aria-labelledby="Agregar Dispositivo" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Agregar Dispositivo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <input id="sensorModal" type="text" class="form-control" placeholder="Sensor">
+          <input id="tipoModal" type="text" class="form-control" placeholder="Tipo">
+          <input id="cantidadModal" type="text" class="form-control" placeholder="Cantidad">
+          <input id="precioModal" type="text" class="form-control" placeholder="Precio">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-primary AgregarBtn">Agregar</button>
+      </div>
+    </div>
   </div>
 </div>
-
-<script src="js/main.js"></script>
+<script type="text/javascript" src="js/table.js"></script>
+<script type="text/javascript" src="js/dinamictable.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 
 <div>
   <br>
