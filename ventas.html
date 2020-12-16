@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/cssgg.css">  
 
     <script src="js/jquery-3.5.1.slim.min.js"></script>
-    <script src="ja/popper.min.js"></script>
+    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -53,8 +53,50 @@
 
 <div>
   <br>
-  <table>
+  <br>
+</div>
+
+<div class="container">
+    <div class="d-flex">
+     <h5>Diseñe su propia alarma:</h5>
+      <br>
+      <br>
+    </div>
+    <div>
+    <table id="tabla" class="mx-auto text-center">
     </table>
+    </div>
+    <div class="mx-auto text-center align-items-center">
+      <button data-toggle="modal" data-target="#AgregarModal">Agregar</button>
+      </div>
+      <!-- Modal -->
+<div class="modal fade" id="AgregarModal" tabindex="-1" role="dialog" aria-labelledby="Agregar Dispositivo" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Agregar Dispositivo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <input id="sensorModal" type="text" class="form-control" placeholder="Sensor">
+          <input id="tipoModal" type="text" class="form-control" placeholder="Tipo">
+          <input id="cantidadModal" type="text" class="form-control" placeholder="Cantidad">
+          <input id="precioModal" type="text" class="form-control" placeholder="Precio">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="close()" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" onclick="agregar.onclick()">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/table.js"></script>
+<script type="text/javascript" src="js/dinamictable.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<div>
   <br>
   <br>
 </div>
