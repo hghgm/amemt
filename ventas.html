@@ -68,7 +68,6 @@
     </div>
     <div class="mx-auto text-center align-items-center">
       <button data-toggle="modal" data-target="#AgregarModal">Agregar</button>
-      <button data-toggle="modal" data-target="#EditarModal">Editar</button>
       </div>
       <!-- Modal Agregar-->
 <div class="modal fade" id="AgregarModal" tabindex="-1" role="dialog" aria-labelledby="Agregar Dispositivo" aria-hidden="true">
@@ -111,13 +110,19 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" onclick="close()" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" onclick="agregar.onclick()">Editar</button>
+        <button type="button" class="btn btn-primary" onclick="editar.onclick()">Editar</button>
       </div>
     </div>
   </div>
 </div>
 
-
+<br>
+<div id="hideshow" class="hideSpinner">
+<button class="btn btn-primary mx-auto d-flex" type="button" disabled>
+  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+  Procesando...
+</button>
+</div>
 
 <script type="text/javascript" src="js/table.js"></script>
 <script type="text/javascript" src="js/dinamictable.js"></script>

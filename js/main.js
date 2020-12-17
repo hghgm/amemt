@@ -1,4 +1,4 @@
- /*  Funcion para agregar los datos en la tabla */
+ //  Función para agregar los datos en la tabla //
 
  let mostrarFila = () => {  
 
@@ -34,7 +34,7 @@
         RellenarInput();
        };
      
-       let $tdOptionEraseAd = document.createElement("td");
+     let $tdOptionEraseAd = document.createElement("td");
      let botonEliminarAd = document.createElement('button');
      botonEliminarAd.innerHTML = "Borrar";
      botonEliminarAd.addEventListener('click', () => {
@@ -53,17 +53,20 @@
      nuevaFila.appendChild($tdOptionEraseAd);
     
      limpiarInput();
+     showhideSpinner();
     };
 
 
-let spinner = () => {
-    setTimeout(mostrarFila, 2000); 
+let demora = () => {
+    setTimeout(mostrarFila, 2000);
 };
 
 // Boton Agregar //
 const agregar = document.getElementsByClassName ("agregarBtn");
 agregar.onclick = () => {
-     spinner();
+     demora();
+     $('#AgregarModal').modal('toggle');
+     showhideSpinner();
 };
 
 
@@ -75,16 +78,40 @@ const limpiarInput = () => {
     precioModal.value = "";
 };
 
- // Rellenar input //
-
+ // Rellenar input - RECONTRA CROTO.COM //
  sensorModalEd = document.getElementById("sensorModalEd");
  tipoModalEd = document.getElementById("tipoModalEd");
  cantidadModalEd = document.getElementById("cantidadModalEd");
  precioModalEd = document.getElementById("precioModalEd");
 
  const RellenarInput = () => {
-    sensorModalEd.value = sensorModal.innerHTML;
-//    tipoModalEd.value = nuevaCelda2.innerHTML;
-//   cantidadModalEd.value = nuevaCelda3.innerHTML;
-//    precioModalEd.value = nuevaCelda4.innerHTML;
+    sensorModalEd.value = "Texto Celta 1";
+    tipoModalEd.value = "Texto Celta 2";
+    cantidadModalEd.value = "Texto Celta 3";
+    precioModalEd.value = "Texto Celta 4";
 };
+
+
+
+// Boton Editar del modal - CROTO.COM //
+const editar = document.getElementsByClassName ("editarBtn");
+editar.onclick = () => {
+//     demoraEdit();
+     $('#EditarModal').modal('toggle');
+};
+
+
+// let demoraEdit = () => {
+//    setTimeout(editarFila, 2000);
+// };
+
+
+// Funciones para mostrar y ocultar el spinner gráfico //
+
+const hideshowEl = document.getElementById("hideshow");
+let showhideSpinner = () => {
+    hideshowEl.classList.toggle("hideSpinner");
+};
+
+
+
