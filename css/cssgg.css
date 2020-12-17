@@ -1,31 +1,35 @@
-.bgwebprotec {
+.footergg {
+    height: 80px;
+}
+
+.bg-gg {
     background-color: rgb(200, 200, 200);
 }
 
-.textcolorblue {
+.textggc {
     color: rgb(0, 0, 90);
 }
 
-.iconcontactpage {
+.icongg {
     width: 20px;
     height: 20px;
 }
 
-.iconmaillimit {
+.iconmailgg {
     width: 20px;
     height: 15px;
 }
 
-.blocklimit92 {
+.blockgg {
     width: 92%;
 }
 
-.iconsociallink {
+.iconggf {
     width: 30px;
     height: 30px;
 }
 
-.iconmaillimitplus {
+.iconmailggf {
     width: 35px;
     height: 25px;
 }
