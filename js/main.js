@@ -1,4 +1,4 @@
- /*  Funcion para mostrar los datos agregados en la tabla */
+ /*  Funcion para agregar los datos en la tabla */
 
  let mostrarFila = () => {  
 
@@ -11,26 +11,30 @@
     nuevaFila.classList.add("td-Elementos");
 
     let nuevaCelda = document.createElement("td");
-     nuevaCelda.classList.add("td-Elementos");
+     nuevaCelda.classList.add("sensorTextTd");
      nuevaCelda.innerHTML = sensorModal.value;
  
      let nuevaCelda2 = document.createElement("td");
-     nuevaCelda2.classList.add("td-Elementos");
+     nuevaCelda2.classList.add("tipoTextTd");
      nuevaCelda2.innerHTML = tipoModal.value;
  
      let nuevaCelda3 = document.createElement("td");
-     nuevaCelda3.classList.add("td-Elementos");
+     nuevaCelda3.classList.add("cantidadTextTd");
      nuevaCelda3.innerHTML = cantidadModal.value;
  
      let nuevaCelda4 = document.createElement("td");
-     nuevaCelda4.classList.add("td-Elementos");
+     nuevaCelda4.classList.add("precioTextTd");
      nuevaCelda4.innerHTML = precioModal.value;
  
      let $tdOptionEditAd = document.createElement("td");
      let botonEditAd = document.createElement("button");
      botonEditAd.innerHTML = "Editar";
+     botonEditAd.onclick = () => {
+        $('#EditarModal').modal('toggle');
+        RellenarInput();
+       };
      
-     let $tdOptionEraseAd = document.createElement("td");
+       let $tdOptionEraseAd = document.createElement("td");
      let botonEliminarAd = document.createElement('button');
      botonEliminarAd.innerHTML = "Borrar";
      botonEliminarAd.addEventListener('click', () => {
@@ -47,40 +51,40 @@
      nuevaFila.appendChild($tdOptionEditAd);
      $tdOptionEraseAd.appendChild(botonEliminarAd);
      nuevaFila.appendChild($tdOptionEraseAd);
-       
+    
+     limpiarInput();
     };
 
+
 let spinner = () => {
-    setTimeout(mostrarFila, 2000);   
+    setTimeout(mostrarFila, 2000); 
 };
 
+// Boton Agregar //
 const agregar = document.getElementsByClassName ("agregarBtn");
-
 agregar.onclick = () => {
-    // e.preventDefault();
-     mostrarFila();
-     limpiarInput();
- };
+     spinner();
+};
 
-// const actualizarTareas = () => {
-//    if(misTareas.length !== 0) {
-//        mensaje.classList.add('display-none');
-//    } else {
-//        mensaje.classList.remove('display-none');
-//    }
-//    listaTareas.innerHTML = "";
-//    for(let i = 0; i < misTareas.length; i++) {
-//        let elLi = document.createElement("li");
-//        elLi.innerText = misTareas[i];        
-//        listaTareas.appendChild(elLi);
-//    }
-//}
 
+ // limpieza del input //
 const limpiarInput = () => {
     sensorModal.value = "";
     tipoModal.value = "";
     cantidadModal.value = "";
     precioModal.value = "";
-}
+};
 
+ // Rellenar input //
 
+ sensorModalEd = document.getElementById("sensorModalEd");
+ tipoModalEd = document.getElementById("tipoModalEd");
+ cantidadModalEd = document.getElementById("cantidadModalEd");
+ precioModalEd = document.getElementById("precioModalEd");
+
+ const RellenarInput = () => {
+    sensorModalEd.value = sensorModal.innerHTML;
+//    tipoModalEd.value = nuevaCelda2.innerHTML;
+//   cantidadModalEd.value = nuevaCelda3.innerHTML;
+//    precioModalEd.value = nuevaCelda4.innerHTML;
+};

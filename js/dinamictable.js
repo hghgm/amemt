@@ -1,3 +1,5 @@
+// Function para completar la tabla //
+
 dispositivos.forEach(producto => {
     const trFilasEL = document.createElement("tr");
     trFilasEL.classList.add('filasTabla');
@@ -21,6 +23,9 @@ dispositivos.forEach(producto => {
     let $tdOptionEdit = document.createElement("td");
     let botonEdit = document.createElement("button");
     botonEdit.innerHTML = producto.OpcionEdit;
+    botonEdit.onclick = () => {
+     $('#EditarModal').modal('toggle');
+    };
     $tdOptionEdit.appendChild(botonEdit);
     trFilasEL.appendChild($tdOptionEdit);
 
@@ -36,4 +41,3 @@ dispositivos.forEach(producto => {
 
     tbodyEl.appendChild(trFilasEL);
 });
-

@@ -1,5 +1,7 @@
 const tablaEl = document.getElementById("tabla");
 
+// Titulos de la tabla //
+
 let theadEl = document.createElement("thead");
 tablaEl.appendChild(theadEl);
 
@@ -34,6 +36,7 @@ let tbodyEl = document.createElement("tbody");
 tablaEl.appendChild(tbodyEl);
 tbodyEl.classList.add('cuerpoTabla');
 
+// Data de la Tabla //
 
 const dispositivos = [{
     id: 1,

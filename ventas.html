@@ -68,8 +68,9 @@
     </div>
     <div class="mx-auto text-center align-items-center">
       <button data-toggle="modal" data-target="#AgregarModal">Agregar</button>
+      <button data-toggle="modal" data-target="#EditarModal">Editar</button>
       </div>
-      <!-- Modal -->
+      <!-- Modal Agregar-->
 <div class="modal fade" id="AgregarModal" tabindex="-1" role="dialog" aria-labelledby="Agregar Dispositivo" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -92,6 +93,32 @@
     </div>
   </div>
 </div>
+<!-- Modal Editar-->
+<div class="modal fade" id="EditarModal" tabindex="-1" role="dialog" aria-labelledby="Editar Dispositivo" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Editar Dispositivo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <input id="sensorModalEd" type="text" class="form-control" placeholder="Sensor">
+          <input id="tipoModalEd" type="text" class="form-control" placeholder="Tipo">
+          <input id="cantidadModalEd" type="text" class="form-control" placeholder="Cantidad">
+          <input id="precioModalEd" type="text" class="form-control" placeholder="Precio">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="close()" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" onclick="agregar.onclick()">Editar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <script type="text/javascript" src="js/table.js"></script>
 <script type="text/javascript" src="js/dinamictable.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
